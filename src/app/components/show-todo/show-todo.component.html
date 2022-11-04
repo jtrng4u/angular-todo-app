@@ -1,0 +1,14 @@
+<div>
+  <table class="todo-container">
+      <tr *ngFor="let todo of todos">
+        <td>
+          <button *ngIf="!todo.complete" (click)="completeTasks(todo.task)">Complete</button>
+        </td>
+        <td *ngIf="!todo.complete">{{todo.task}}</td>
+        <td *ngIf="todo.complete">
+          <del>{{todo.task}}</del>
+        </td>
+        <td><fa-icon [ngStyle]="{'color': 'red'}" [icon]="faTimes" (click)="deleteTasks(todo.task)"></fa-icon></td>
+      </tr>
+  </table>
+</div>

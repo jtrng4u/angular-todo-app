@@ -1,0 +1,7 @@
+<div>
+  <p>
+    <label for="task"></label>
+    <input name="task" id="task" [(ngModel)]="task" (keyup.enter)="addTasks(task)" placeholder="Add your to-do"/>
+    <button (click)="addTasks(task)">Add</button>
+  </p>
+</div>
